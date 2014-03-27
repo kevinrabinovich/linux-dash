@@ -195,7 +195,7 @@ Bootstrap Admin Template by EGrappler.com
 	
 	
 	
-.big_stats  {
+#big_stats  {
 	width: 100%; 
 	display: table;
 	margin-top: 1.5em;
@@ -205,7 +205,7 @@ Bootstrap Admin Template by EGrappler.com
 	border:0;
 }
 
-.big_stats .stat {
+#big_stats .stat {
 	width: 35%;
 	height: 90px;
 	text-align: center;
@@ -217,8 +217,8 @@ Bootstrap Admin Template by EGrappler.com
 	border-left: 1px solid #FFF;
 }
 
-.big_stats  i { font-size:20px; display:block; line-height: 30px; color:#b2afaa; }
-.big_stats .stat i { color:#19bc9c; }
+#big_stats  i { font-size:20px; display:block; line-height: 30px; color:#b2afaa; }
+#big_stats .stat i { color:#19bc9c; }
 
 h6.bigstats {
 	margin: 20px;
@@ -227,24 +227,24 @@ h6.bigstats {
 	margin-bottom: 26px;
 }
 
-.big_stats .stat:first-child {
+#big_stats .stat:first-child {
 	border-left: none;
 	width:35%;
 }
 
-.big_stats .stat:last-child {
+#big_stats .stat:last-child {
 	border-right: none;
 	width:35%;
 }
 
-.big_stats .stat h4 {
+#big_stats .stat h4 {
 	font-size: 11px;
 	font-weight: bold;
 	color: #777;
 	margin-bottom: 1.5em;
 }
 
-.big_stats .stat .value {
+#big_stats .stat .value {
 	font-size: 20px;
 	font-weight: bold;
 	color: #545454;
@@ -255,12 +255,12 @@ h6.bigstats {
 
 @media all and (max-width: 950px) and (min-width: 1px) {
 	
-	.big_stats {
+	#big_stats {
 		display: block;
 		margin-bottom: -10px;
 	}
 	
-	.big_stats .stat {
+	#big_stats .stat {
 		width: 25%;
 		display: block;
 		margin-bottom: 1em;
@@ -272,7 +272,7 @@ h6.bigstats {
 }
 
 @media (max-width: 767px) {
-	.big_stats .stat .value {
+	#big_stats .stat .value {
 		font-size: 25px;
 	}
 }
@@ -355,3 +355,90 @@ h6.bigstats {
 .dataTables_paginate a:hover{ pointer:pointer;}
 .navbar-fixed-top{  margin-left:0px;}
 .widget-search{display: inline-block; vertical-align: middle; margin: 0 6px; width: 200px;}
+
+/* Added by kevinrabinovich */
+meter {
+    /* Reset appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	background: #ddd;
+	width: 100%;
+	height: 18px;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+meter::-webkit-meter-bar {
+	background: #ddd;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+meter::-webkit-meter-optimum-value {
+	background: #444;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+meter::-moz-meter-bar {
+	background: #ddd;
+	-moz-border-radius: 3px;
+    border-radius: 3px;
+}
+meter:-moz-meter-optimum::-moz-meter-bar {
+	background: #444;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/*<progress> fallback styling*/
+progress {
+	/*Reset appearance*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	background: #ddd;
+	color: #444; /*For IE*/
+	width: 100%;
+	height: 18px;
+	border: 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+progress[value] {
+	/*Reset appearance*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+progress::-webkit-progress-bar {
+    background: #ddd;
+	-webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+progress::-webkit-progress-value {
+    background-color: #444;
+	-webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+progress::-moz-progress-bar {
+    background-color: #444;
+	-moz-border-radius: 3px;
+    border-radius: 3px;
+}
+/*<div> > <span> fallback styling*/
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 3px;
+  width: 100%;
+  height: 18px;
+  position: relative;
+  display: block;
+}
+  
+.progress-bar > span {
+  background-color: #444;
+  border-radius: 3px;
+  display: block;
+}

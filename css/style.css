@@ -10,11 +10,11 @@ Bootstrap Admin Template by EGrappler.com
 
 body {
 	background: #f9f6f1;
-	font: 15px 'Times';
+	font: 13px/1.7em 'Open Sans';
 }
     
 p { 
-	font: 15px 'Times'; 	
+	font: 13px/1.7em 'Open Sans'; 	
 }
 
 a {
@@ -352,7 +352,7 @@ textarea {
 	
 .widget-header {
 	position: relative;
-        cursor: move;	
+	
 	height: 40px;
 	line-height: 40px;
 	
@@ -398,10 +398,6 @@ textarea {
 	font-size: 16px;
 	color: #555;
 	vertical-align: middle;
-}
-
-.icon-refresh {
-	padding: 5px 10px;
 }
 
 .widget-content {
@@ -1251,7 +1247,7 @@ width: 11px;}
 
 
 /*------------------------------------------------------------------
-[2. Max Width: 979px]
+[3. Max Width: 979px]
 */
 
 @media (max-width: 979px) {
@@ -1268,18 +1264,6 @@ width: 11px;}
 	.subnavbar .container {		
 		width: auto;
 	}
-
-	.widget-header {
-		height: 100%;
-	}
-
-	.widget-header h3 {
-		margin-right: 1em;
-	}
-
-	.js-refresh-info {
-		margin-left: 25px;
-	}
 }
 
 
@@ -1288,20 +1272,12 @@ width: 11px;}
 
 
 /*------------------------------------------------------------------
-[3. Max Width: 1199px]
+[2. Max Width: 1200px]
 */
 
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
 	.navbar .search-query {
 		width: 200px;
 	}
-
-	.widget-header {
-		height: 100%;
-	}
-
-	.js-refresh-info {
-		margin-left: 25px;
-	}	
+	
 }
-

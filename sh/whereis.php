@@ -1,6 +1,8 @@
 <?php 
 
-    exec('df -h|awk \'{print $1","$2","$3","$4","$5","$6}\'',$result);
+    exec('whereis php node mysql vim python ruby java apache2 nginx openssl vsftpd make'.
+          '|awk \'{ split($1, a, ":");if (length($2)==0) print a[1]",Not Installed"; else print a[1]","$2;}\'',$result);
+    
     header('Content-Type: application/json; charset=UTF-8');
 
     echo "[";
@@ -8,7 +10,6 @@
     $max = count($result)-1;
     foreach ($result as $a)
     {    
-        if ($x==0){ $x++; continue;}
         echo json_encode( explode(',',$result[$x]) );
         echo ($x==$max)?'':',';
         unset($result[$x],$a);

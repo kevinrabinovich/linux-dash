@@ -1,6 +1,6 @@
 <?php 
 
-    exec('/usr/bin/awk -F: \'{ if ($3<=499) print "system,"$1","$6; else print "user,"$1","$6; }\' < /etc/passwd',$result);
+    exec('awk -F: \'{ if ($3<=499) print "system,"$1","$6; else print "user,"$1","$6; }\' < /etc/passwd',$result);
     
     header('Content-Type: application/json; charset=UTF-8');
     echo "[";
